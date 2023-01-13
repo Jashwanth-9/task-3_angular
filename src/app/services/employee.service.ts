@@ -5,7 +5,6 @@ import { Subject } from 'rxjs';
   providedIn: 'root',
 })
 export class EmployeeService {
-
   employ_subject = new Subject();
   job_subject = new Subject();
   department_subject = new Subject();
@@ -133,7 +132,7 @@ export class EmployeeService {
     this.newJob(['Software Engineer', 1]),
   ];
 
-  newDepartment (ar: any[]) {
+  newDepartment(ar: any[]) {
     let new_department = {
       department: '',
       num: 1,
@@ -225,19 +224,17 @@ export class EmployeeService {
   }
 
   createAlphabetFlag() {
-    this.alpha_flags= new Array<number>(26).fill(0)
+    this.alpha_flags = new Array<number>(26).fill(0);
     return this.alpha_flags;
   }
   createJobFlag() {
-    this.job_flags= new Array<number>(8).fill(0)
+    this.job_flags = new Array<number>(8).fill(0);
     return this.job_flags;
   }
   createDepartmentFlag() {
-    this.department_flags= new Array<number>(4).fill(0)
+    this.department_flags = new Array<number>(4).fill(0);
     return this.department_flags;
   }
 
-  constructor() {
-  }
-
+  constructor() {}
 }

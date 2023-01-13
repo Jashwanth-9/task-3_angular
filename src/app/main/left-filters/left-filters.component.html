@@ -1,26 +1,42 @@
 <ul class="primary-list">
-    <h2 >Departments</h2>
-    <li class="dep-name" [ngClass]=" department_flags[i]==1 ? 'lft-brdr':'no-brdr'" *ngFor="let department of departments; let i=index" (click)="filterDepartments(department.department,i)">
-        {{department.department}} ({{department.num}})
-        
-    </li>
+  <h2>Departments</h2>
+  <li
+    class="dep-name"
+    [ngClass]="department_flags[i] == 1 ? 'lft-brdr' : 'no-brdr'"
+    *ngFor="let department of departments; let i = index"
+    (click)="filterDepartments(department.department, i)"
+  >
+    {{ department.department }} ({{ department.num }})
+  </li>
 </ul>
 <ul class="secondary-list">
-    <h2>Offices</h2>
-    <li>Seattle (1)</li>
-    <li>India (1)</li>
+  <h2>Offices</h2>
+  <li>Seattle (1)</li>
+  <li>India (1)</li>
 </ul>
 <ul class="ternary-list">
-    <h2>Job Titles</h2>
-    <ng-container  *ngFor="let job of jobs; let i=index">
-        <li [ngClass]=" job_flags[i]==1 ? 'lft-brdr':'no-brdr'" *ngIf="i<5" (click)="filterJobs(job.job,i)">
-            {{job.job}} ({{job.num}})
-        
-        </li>
-        <li [hidden]=hide_view [ngClass]=" job_flags[i]==1 ? 'lft-brdr':'no-brdr'" *ngIf="i>=5" (click)="filterJobs(job.job,i)">
-            {{job.job}} ({{job.num}})
-        </li> 
-    </ng-container>
-    <li class="text-blue text-smaller" [hidden]=!hide_view (click)="expand()">view more</li>
-    <li class="text-blue text-smaller" [hidden]=hide_view (click)="compress()">view less</li>
+  <h2>Job Titles</h2>
+  <ng-container *ngFor="let job of jobs; let i = index">
+    <li
+      [ngClass]="job_flags[i] == 1 ? 'lft-brdr' : 'no-brdr'"
+      *ngIf="i < 5"
+      (click)="filterJobs(job.job, i)"
+    >
+      {{ job.job }} ({{ job.num }})
+    </li>
+    <li
+      [hidden]="hide_view"
+      [ngClass]="job_flags[i] == 1 ? 'lft-brdr' : 'no-brdr'"
+      *ngIf="i >= 5"
+      (click)="filterJobs(job.job, i)"
+    >
+      {{ job.job }} ({{ job.num }})
+    </li>
+  </ng-container>
+  <li class="text-blue text-smaller" [hidden]="!hide_view" (click)="expand()">
+    view more
+  </li>
+  <li class="text-blue text-smaller" [hidden]="hide_view" (click)="compress()">
+    view less
+  </li>
 </ul>

@@ -1,39 +1,39 @@
 .main {
-    display: grid;
-    grid-template-columns: 60% auto;
-    font-size: 1vw;
+  display: grid;
+  grid-template-columns: 60% auto;
+  font-size: 1vw;
 }
 
 .btn-green {
-    background-color: rgb(81, 177, 81);
-    padding: 2%;
-    color: #e9e8e8;
-    font-size: 1.2vw;
+  background-color: rgb(81, 177, 81);
+  padding: 2%;
+  color: #e9e8e8;
+  font-size: 1.2vw;
 }
 .drop {
-    display: flex;
-    justify-content: space-evenly;
-    margin-left: 3vw;
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 3vw;
 }
 #dropdown {
-    width: 10vw;
-    background-color: white;
+  width: 10vw;
+  background-color: white;
 }
 button:hover {
-    border: 1px black;
-    cursor: pointer;
+  border: 1px black;
+  cursor: pointer;
 }
 .left {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 .line {
-    margin-top: 1vh;
+  margin-top: 1vh;
 }
 .input {
-    width: 16vw;
-    font-size: 1vw;
+  width: 16vw;
+  font-size: 1vw;
 }
 .text-smaller {
-    font-size: 1vw;
+  font-size: 1vw;
 }
